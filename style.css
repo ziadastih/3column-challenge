@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* =========global and roots ========== */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+h1 {
+  font-family: var(--headerfont);
+  font-weight: 700;
+  color: var(--backgroundheadingsbuttons);
+}
+p {
+  font-family: var(--paragraphfoot);
+  font-weight: 400;
+}
+body {
+  font-size: 62.5%;
+  background-color: var(--backgroundheadingsbuttons);
+}
+
+:root {
+  /* =========backgrounds============== */
+  --Brightorange: hsl(31, 77%, 52%);
+  --Darkcyan: hsl(184, 100%, 22%);
+  --Verydarkcyan: hsl(179, 100%, 13%);
+
+  /* =====neutral======= */
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+  --backgroundheadingsbuttons: hsl(0, 0%, 95%);
+
+  /* ========fonts var=========== */
+  --headerfont: "Big Shoulders Display", cursive;
+  --paragraphfoot: "Lexend Deca", sans-serif;
+}
+/* ========main grid for mobile======= */
+.grid {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10%;
+}
+/* ========wetting column one===== */
+.column1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: var(--Brightorange);
+  padding: 20px;
+  width: 14rem;
+  border-radius: 12px 12px 0px 0px;
+}
+.column1 h1 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+.column1 p {
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  padding-bottom: 1.5rem;
+  color: var(--paragraphs);
+}
+.btn {
+  cursor: pointer;
+  text-transform: capitalize;
+  border: none;
+  color: var(--Brightorange);
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+}
+/* ==========setting column 2====== */
+.column2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: var(--Darkcyan);
+  padding: 20px;
+  width: 14rem;
+}
+.column2 h1 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+.column2 p {
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  padding-bottom: 1.5rem;
+  color: var(--paragraphs);
+}
+.btn2 {
+  text-transform: capitalize;
+  border: none;
+  color: var(--Darkcyan);
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+}
+/* ===========setting column 3======== */
+.column3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: var(--Verydarkcyan);
+  padding: 20px;
+  width: 14rem;
+  border-radius: 0px 0px 12px 12px;
+}
+.column3 h1 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+.column3 p {
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  padding-bottom: 1.5rem;
+  color: var(--paragraphs);
+}
+.btn3 {
+  text-transform: capitalize;
+  border: none;
+  color: var(--Verydarkcyan);
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+}
+/* ======setting hover for btn====== */
+.btn:hover {
+  background-color: transparent;
+  color: var(--backgroundheadingsbuttons);
+  border: 1px solid var(--backgroundheadingsbuttons);
+}
+/* ========setting media for 750px+===== */
+@media (min-width: 750px) {
+  .grid {
+    flex-direction: row;
+    margin-top: 15%;
+  }
+  .column1 {
+    border-radius: 12px 0px 0px 12px;
+  }
+  .column3 {
+    border-radius: 0px 12px 12px 0px;
+  }
+  .column p {
+    line-height: 1.2rem;
+    padding-bottom: 3rem;
+  }
+}
